@@ -9,9 +9,9 @@ export default function Home() {
           EUCompliant<span className="text-[#2d7a4a]">.de</span>
         </div>
         <div className="flex gap-1 items-center">
-          <button className="px-4 py-1.5 text-sm text-[#8a8780] rounded-md hover:bg-[#efefeb]">AI Governance</button>
-          <button className="px-4 py-1.5 text-sm text-[#8a8780] rounded-md hover:bg-[#efefeb]">AI Gateway</button>
-          <button className="px-4 py-1.5 text-sm text-[#8a8780] rounded-md hover:bg-[#efefeb]">Automation</button>
+          <Link href="/governance" className="px-4 py-1.5 text-sm text-[#8a8780] rounded-md hover:bg-[#efefeb]">AI Governance</Link>
+          <Link href="/gateway" className="px-4 py-1.5 text-sm text-[#8a8780] rounded-md hover:bg-[#efefeb]">AI Gateway</Link>
+          <Link href="/automation" className="px-4 py-1.5 text-sm text-[#8a8780] rounded-md hover:bg-[#efefeb]">Automation</Link>
           <button className="ml-2 px-4 py-2 text-sm font-semibold bg-[#1a472a] text-white rounded-md hover:bg-[#2d7a4a]">
             Start Free Trial →
           </button>
@@ -75,18 +75,21 @@ export default function Home() {
           <div className="grid grid-cols-3 gap-5">
             {[
               {
+                href: '/governance',
                 icon: '🛡️', tag: 'AI Act Compliance', title: 'AI Governance', color: 'border-[#2d7a4a]', tagColor: 'bg-green-50 text-green-700',
                 desc: 'Automate your AI Act compliance. Know your risk level, generate audit reports.',
                 features: ['AI Inventory — track every AI tool', 'Risk Classification (minimal/limited/high)', 'Compliance checklist with AI Act articles', 'One-click PDF audit report'],
                 btnColor: 'border-[#1a472a] text-[#1a472a] hover:bg-[#1a472a] hover:text-white'
               },
               {
+                href: '/gateway',
                 icon: '⚡', tag: 'EU AI Gateway', title: 'AI Infrastructure', color: 'border-[#1a3a5c]', tagColor: 'bg-blue-50 text-blue-700',
                 desc: 'Route all your LLM calls through a compliant EU gateway. Full logging, cost tracking.',
                 features: ['Multi-LLM routing (OpenAI, Anthropic, Mistral)', 'Real-time cost tracking per team', 'Prompt & response logging (GDPR-safe)', 'Data stays in EU at all times'],
                 btnColor: 'border-[#1a3a5c] text-[#1a3a5c] hover:bg-[#1a3a5c] hover:text-white'
               },
               {
+                href: '/automation',
                 icon: '🔄', tag: 'Vertical Automation', title: 'Automation', color: 'border-[#c85a00]', tagColor: 'bg-orange-50 text-orange-700',
                 desc: 'Pre-built AI automations for your specific sector. HR, property, recruiting.',
                 features: ['CV parsing & candidate scoring', 'Tenant document automation', 'Refund & support automation', 'Compliant with AI Act by default'],
@@ -108,9 +111,9 @@ export default function Home() {
                       </li>
                     ))}
                   </ul>
-                  <button className={`w-full py-2.5 border rounded-lg text-sm font-semibold transition-colors ${m.btnColor}`}>
+                  <Link href={m.href} className={`block w-full py-2.5 border rounded-lg text-sm font-semibold text-center transition-colors ${m.btnColor}`}>
                     Open {m.title} →
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
