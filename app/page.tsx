@@ -155,10 +155,18 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-[#e0ddd6] py-8 px-10 flex justify-between items-center text-xs text-[#8a8780] font-mono">
-        <span>EUCompliant.de — KI-Act Compliance Plattform</span>
-        <span>© 2026 · Köln, Deutschland</span>
-      </footer>
-    </main>
-  )
-}
+      <footer className="border-t border-[#e0ddd6] py-8 px-10">
+  <div className="max-w-6xl mx-auto">
+    <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 mb-6 text-xs text-orange-800 leading-relaxed">
+      <strong>⚠️ Haftungsausschluss:</strong> EUCompliant.de ist ein Software-Tool zur Unterstützung bei der Compliance-Dokumentation. Die Plattform ersetzt keine Rechtsberatung und stellt kein Rechtsgutachten dar. Alle Angaben sind unverbindlich. Für rechtsverbindliche Compliance-Bewertungen ist stets ein qualifizierter Rechtsanwalt hinzuzuziehen.
+    </div>
+    <div className="flex justify-between items-center text-xs text-[#8a8780] font-mono">
+      <span>EUCompliant.de — KI-Act Compliance Plattform · Köln, Deutschland</span>
+      <div className="flex gap-4">
+        <Link href="/impressum" className="hover:text-[#0f0e0c]">Impressum</Link>
+        <Link href="/datenschutz" className="hover:text-[#0f0e0c]">Datenschutz</Link>
+        <Link href="/nutzungsbedingungen" className="hover:text-[#0f0e0c]">Nutzungsbedingungen</Link>
+      </div>
+    </div>
+  </div>
+</footer>
