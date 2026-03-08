@@ -12,9 +12,9 @@ export default function Home() {
           <Link href="/governance" className="px-4 py-1.5 text-sm text-[#8a8780] rounded-md hover:bg-[#efefeb]">KI-Governance</Link>
           <Link href="/gateway" className="px-4 py-1.5 text-sm text-[#8a8780] rounded-md hover:bg-[#efefeb]">KI-Gateway</Link>
           <Link href="/automation" className="px-4 py-1.5 text-sm text-[#8a8780] rounded-md hover:bg-[#efefeb]">Automatisierung</Link>
-          <button className="ml-2 px-4 py-2 text-sm font-semibold bg-[#1a472a] text-white rounded-md hover:bg-[#2d7a4a]">
+          <Link href="/register" className="ml-2 px-4 py-2 text-sm font-semibold bg-[#1a472a] text-white rounded-md hover:bg-[#2d7a4a]">
             Kostenlos testen →
-          </button>
+          </Link>
         </div>
       </nav>
 
@@ -32,12 +32,12 @@ export default function Home() {
             KI-Governance, Infrastruktur-Monitoring und Vertikale Automatisierung — alles was europäische Unternehmen für Compliance brauchen.
           </p>
           <div className="flex gap-3">
-            <button className="px-6 py-3 bg-[#0f0e0c] text-white font-semibold rounded-lg hover:bg-[#1a472a] transition-colors">
+            <Link href="/register" className="px-6 py-3 bg-[#0f0e0c] text-white font-semibold rounded-lg hover:bg-[#1a472a] transition-colors">
               Kostenlos testen →
-            </button>
-            <button className="px-5 py-3 border border-[#e0ddd6] text-[#1a1916] rounded-lg hover:bg-[#efefeb] transition-colors">
-              Module ansehen ↓
-            </button>
+            </Link>
+            <Link href="/login" className="px-5 py-3 border border-[#e0ddd6] text-[#1a1916] rounded-lg hover:bg-[#efefeb] transition-colors">
+              Anmelden →
+            </Link>
           </div>
         </div>
 
@@ -146,9 +146,9 @@ export default function Home() {
                 <ul className="space-y-2 mb-6">
                   {p.features.map(f => <li key={f} className="text-sm flex gap-2"><span className="text-[#2d7a4a] font-bold text-xs mt-0.5">✓</span>{f}</li>)}
                 </ul>
-                <button className={`w-full py-2.5 rounded-lg text-sm font-semibold transition-colors ${p.popular ? 'bg-[#1a472a] text-white hover:bg-[#2d7a4a]' : 'border border-[#e0ddd6] hover:bg-[#0f0e0c] hover:text-white'}`}>
+                <Link href="/register" className={`block w-full py-2.5 rounded-lg text-sm font-semibold text-center transition-colors ${p.popular ? 'bg-[#1a472a] text-white hover:bg-[#2d7a4a]' : 'border border-[#e0ddd6] hover:bg-[#0f0e0c] hover:text-white'}`}>
                   {p.tier === 'Enterprise' ? 'Vertrieb kontaktieren' : 'Jetzt starten'}
-                </button>
+                </Link>
               </div>
             ))}
           </div>
@@ -156,20 +156,20 @@ export default function Home() {
       </section>
 
       <footer className="border-t border-[#e0ddd6] py-8 px-10">
-  <div className="max-w-6xl mx-auto">
-    <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 mb-6 text-xs text-orange-800 leading-relaxed">
-      <strong>⚠️ Haftungsausschluss:</strong> EUCompliant.de ist ein Software-Tool zur Unterstützung bei der Compliance-Dokumentation. Die Plattform ersetzt keine Rechtsberatung und stellt kein Rechtsgutachten dar. Alle Angaben sind unverbindlich. Für rechtsverbindliche Compliance-Bewertungen ist stets ein qualifizierter Rechtsanwalt hinzuzuziehen.
-    </div>
-    <div className="flex justify-between items-center text-xs text-[#8a8780] font-mono">
-      <span>EUCompliant.de — KI-Act Compliance Plattform · Köln, Deutschland</span>
-      <div className="flex gap-4">
-        <Link href="/impressum" className="hover:text-[#0f0e0c]">Impressum</Link>
-        <Link href="/datenschutz" className="hover:text-[#0f0e0c]">Datenschutz</Link>
-        <Link href="/nutzungsbedingungen" className="hover:text-[#0f0e0c]">Nutzungsbedingungen</Link>
-      </div>
-    </div>
-  </div>
-</footer>
-  </main>
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 mb-6 text-xs text-orange-800 leading-relaxed">
+            <strong>⚠️ Haftungsausschluss:</strong> EUCompliant.de ist ein Software-Tool zur Unterstützung bei der Compliance-Dokumentation. Die Plattform ersetzt keine Rechtsberatung und stellt kein Rechtsgutachten dar. Alle Angaben sind unverbindlich. Für rechtsverbindliche Compliance-Bewertungen ist stets ein qualifizierter Rechtsanwalt hinzuzuziehen.
+          </div>
+          <div className="flex justify-between items-center text-xs text-[#8a8780] font-mono">
+            <span>EUCompliant.de — KI-Act Compliance Plattform · Köln, Deutschland</span>
+            <div className="flex gap-4">
+              <Link href="/impressum" className="hover:text-[#0f0e0c]">Impressum</Link>
+              <Link href="/datenschutz" className="hover:text-[#0f0e0c]">Datenschutz</Link>
+              <Link href="/nutzungsbedingungen" className="hover:text-[#0f0e0c]">Nutzungsbedingungen</Link>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
   )
 }
